@@ -1,5 +1,8 @@
 # React TS in ServiceNow
 
+![image](https://user-images.githubusercontent.com/89402489/236964380-49b24d91-ee58-49fa-a8ed-d4a33e273933.png)
+
+
 ## Tutorial - EN
 
 ### 1 - Install this servicenow react boilerplate 
@@ -43,6 +46,13 @@ Attach image files in this module:
 
 ### 5 - Access your page in "index" module click on EndPoint
 ![image](https://user-images.githubusercontent.com/89402489/236962117-ec6f5271-2d80-4006-addc-4dcbe2553316.png)
+
+### Notices
+You can install whatever package you like.
+
+You can test locally using "npm run dev" as usual.
+
+Every new update you will have to deploy using npm run snbuild and dragging the new files. If there was a change in the css, attach it again, if there were new images, attach them, if there was a change in the javascript, attach all the files that were generated again. And don't forget to delete the old attached files that have the same name before deploying the new one!
 
 ## Tutorial - PT-BR
 
@@ -89,4 +99,10 @@ Anexe os arqivos da pasta ./dist/img no modulo Images:
 ### 5 - Acesse sua pagina indo no modulo "Index" e clicando no link do "Endpoint"
 ![image](https://user-images.githubusercontent.com/89402489/236962117-ec6f5271-2d80-4006-addc-4dcbe2553316.png)
 
+### Avisos
+Você pode instalar o pacote que quiser.
+
+Você pode testar de forma local usando "npm run dev" normalmente.
+
+Toda nova atualização você terá que fazer o deploy usando npm run snbuild e arrastando os novos arquivos. Se teve mudança no css, anexe novamente, se teve novas imagens anexe elas, se teve mudança no javascript anexe novamente todos os arquivos que foram gerados. E não esqueça de excluir os arquivos anexados antigos que tem o mesmo nome antes de fazer o deploy do novo!
 
