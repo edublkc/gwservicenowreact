@@ -46,19 +46,19 @@ Attach image files in this module:
 
 ## Tutorial - PT-BR
 
-### 1 - Instale esse boilerplate do react pronto para usar no servicenow
+### 1 - Instale esse boilerplate do react que contém as configurações prontas para usar no ServiceNow:
 git clone https://github.com/edublkc/gwservicenowreact.git
 
-Navegue para a pasta snreact folder e instale as npm dependencies:
+Navegue para a pasta snreact e instale as npm dependencies:
 
 npm install
 
-### 2 - Instale o xml do updateset da aplicação GW React - ServiceNow scoped application 
-Instale o XML update set gwreact-application-servicenow.xml o arquivo está junto desse repositório.
+### 2 - Instale o xml do updateset da aplicação GW React
+Instale o XML do updateset que contem a aplicação, gwreact-application-servicenow.xml o arquivo está junto desse repositório.
 
 
 ### 3 - Gere os arquivos para publicar
-Gere os arquivos react prontos para usar no Servicenow usando:
+Gere os arquivos react, eles vão estar prontos para usar no Servicenow, basta usar o comando:
 
 npm run snbuild
 
@@ -70,13 +70,14 @@ a pasta "dist" imita a estrutura usada na API do ServiceNow, então para publica
 
 ### 4 - Publicar na ServiceNow
 
-Basta copiar o codigo HTML gerado na pasta ./dist/index.html no modulo "Index" na instancia do ServiceNow. O Código HTML ja inclui todas as injeções de codigos necessarias para rodar no ServiceNow:
+Basta copiar o codigo HTML gerado na pasta ./dist/index.html no modulo "Index" na instancia do ServiceNow e colar o codigo lá. O Código HTML ja inclui todas as injeções de codigos necessarias para rodar no ServiceNow:
 ![image](https://user-images.githubusercontent.com/89402489/236961909-8ab9c2b4-0a13-4a35-b81f-bca86057b480.png)
 
 ![image](https://user-images.githubusercontent.com/89402489/236960964-c172c8ba-8b7f-4da9-b31e-0107cc8123da.png)
 
-Attach (drag-n-drop) the files from ./dist/js/... folders to the corresponding GET resources. Your JS resource should look like this (see attached files on a form):
-Faça o anexo dos arquivo gerados na pasta ./dist/... nos modulos correspondentes. Os arquivos dda pasta ./dist/js no modulo "Javascript"
+Faça o anexo dos arquivo gerados na pasta ./dist/... nos modulos correspondentes. 
+
+Os arquivos da pasta ./dist/js no modulo "Javascript"
 ![image](https://user-images.githubusercontent.com/89402489/236961454-5714b05c-56fe-4e30-a9f7-d088789d9d79.png)
 
 Anexe os arquivos da pasta ./dist/css no modulo CSS:
