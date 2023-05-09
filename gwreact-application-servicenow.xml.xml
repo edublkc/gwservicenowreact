@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2023-05-09 00:38:57">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<application_name>GW React</application_name>
+<application_scope>x_727158_gw_react</application_scope>
+<application_version>1.0.0</application_version>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>GW React application, Created by: Eduardo Mota Mafra</description>
+<inserted/>
+<name>Default</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>04ee500247622110ed23d264336d4395</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>a4b4c7b347a22110ed23d264336d43c7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_d3f9667b47222110ed23d264336d4390</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="GW React">fc30280647622110ed23d264336d43f2</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>DIRECT</link_type><map_page/><mobile_title>Javascript</mobile_title><mobile_view_name>Mobile</mobile_view_name><name/><order>210</order><override_menu_roles>false</override_menu_roles><query>nav_to.do?uri=sys_ws_operation.do?sys_id=fdbfdc8247622110ed23d264336d43f7</query><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-08 22:43:03</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>d3f9667b47222110ed23d264336d4390</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Javascript</sys_name><sys_overrides/><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_app_module_d3f9667b47222110ed23d264336d4390</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-08 22:43:03</sys_updated_on><timeline_page/><title>Javascript</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<payload_hash>-795452038</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>20b4c7b347a22110ed23d264336d43c9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187fd8857740000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>Javascript</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_guid>c72a2a7b77222110f128f32235c03aae</update_guid>
+<update_guid_history>c72a2a7b77222110f128f32235c03aae:-795452038</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_0624648647622110ed23d264336d4338</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl&gt;cf9d01d3e73003009d6247e603f6a990&lt;/enforce_acl&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;IMG&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	var fileName = request.pathParams.file;
+	var currentRecord = "0624648647622110ed23d264336d4338";
+	var ar = new GlideRecord('sys_attachment');
+	ar.addQuery('table_sys_id', currentRecord);
+	ar.addQuery('file_name', fileName);
+	ar.query();
+	
+	if (fileName.indexOf('-svg')&gt;0) {
+		response.setContentType('image/svg+xml');
+	}
+	else{
+		response.setContentType('image/jpeg');
+	}
+	
+	response.setStatus(200);
+
+	if (ar.next()) {
+		var gsa = new GlideSysAttachment();
+		var attachmentStream = new gsa.getContentStream(ar.sys_id.toString()); 
+		var writer = response.getStreamWriter();
+		writer.writeStream(attachmentStream);
+	} else {
+		return "file not found";
+	}
+
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/x_727158_gw_react/container/img/{file}&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/img/{file}&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;true&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;false&lt;/requires_authentication&gt;&lt;requires_snc_internal_role&gt;true&lt;/requires_snc_internal_role&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-05-03 02:28:44&lt;/sys_created_on&gt;&lt;sys_id&gt;0624648647622110ed23d264336d4338&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;IMG&lt;/sys_name&gt;&lt;sys_package display_value="GW React" source="x_727158_gw_react"&gt;0cee500247622110ed23d264336d4392&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GW React"&gt;0cee500247622110ed23d264336d4392&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_0624648647622110ed23d264336d4338&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-05-08 22:52:33&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="React app container"&gt;4a4f58c247622110ed23d264336d43d8&lt;/web_service_definition&gt;&lt;web_service_version/&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-1544332626</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>20b4c7b347a22110ed23d264336d43cc</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187fd910ae80000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>IMG</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_guid>125caafba12221108d59b119561be8eb</update_guid>
+<update_guid_history>125caafba12221108d59b119561be8eb:-1544332626,1636a88aea62211022f8ffbdc9634913:2042404144,c716248a1d62211049c65a7475d1768f:1767133727,9be5e48a31622110a43af9c21d628e62:-1309087829,cbd5204aa56221107c04e02d33986892:1767133727,6f94a00a19622110422fd6ded7f1c221:-1305115277,8654a8867762211024fdb49966ebcc9d:673899428,6644e0c6e0622110befbbc46d5cc6efd:-1381458813</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_3e5aea7b47222110ed23d264336d431f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="GW React">fc30280647622110ed23d264336d43f2</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>DIRECT</link_type><map_page/><mobile_title>Javascript</mobile_title><mobile_view_name>Mobile</mobile_view_name><name/><order>230</order><override_menu_roles>false</override_menu_roles><query>nav_to.do?uri=sys_ws_operation.do?sys_id=0624648647622110ed23d264336d4338</query><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-08 22:43:51</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>3e5aea7b47222110ed23d264336d431f</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Images</sys_name><sys_overrides/><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_app_module_3e5aea7b47222110ed23d264336d431f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-08 22:44:22</sys_updated_on><timeline_page/><title>Images</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<payload_hash>-1823452257</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>24b4c7b347a22110ed23d264336d43c8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187fd89899a0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>Images</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_guid>867aaa7bad222110b258e0422611f77e</update_guid>
+<update_guid_history>867aaa7bad222110b258e0422611f77e:-1823452257,325aee7b282221107e6138f20bd5f18d:-197493632</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_853f9c4247622110ed23d264336d43fa</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><condition/><description/><name>x_727158_gw_react_index-html</name><operation display_value="read">read</operation><script/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:06:31</sys_created_on><sys_id>853f9c4247622110ed23d264336d43fa</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_727158_gw_react_index-html</sys_name><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_security_acl_853f9c4247622110ed23d264336d43fa</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:06:31</sys_updated_on><type display_value="ui_page">ui_page</type></sys_security_acl></record_update>]]></payload>
+<payload_hash>631098261</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>24b4c7b347a22110ed23d264336d43cb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df5c77260000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table>x_727158_gw_react_index-html</table>
+<target_name>x_727158_gw_react_index-html</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_guid>093f18c299622110e3ba2ec667981e0e</update_guid>
+<update_guid_history>093f18c299622110e3ba2ec667981e0e:631098261</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_9fa1688647622110ed23d264336d432f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>execute</operation><source_scope display_value="GW React">0cee500247622110ed23d264336d4392</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:17:19</sys_created_on><sys_id>9fa1688647622110ed23d264336d432f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ScriptableServiceResultBuilder.setStatus</sys_name><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_scope_privilege_9fa1688647622110ed23d264336d432f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:17:19</sys_updated_on><target_name>ScriptableServiceResultBuilder.setStatus</target_name><target_scope display_value="Global">global</target_scope><target_type>scriptable</target_type></sys_scope_privilege></record_update>]]></payload>
+<payload_hash>-1766892287</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>28b4c7b347a22110ed23d264336d43ca</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df6659c20000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>ScriptableServiceResultBuilder.setStatus</target_name>
+<type>Cross scope privilege</type>
+<update_domain>global</update_domain>
+<update_guid>9fa16886cc622110134873cbabe1ad30</update_guid>
+<update_guid_history>9fa16886cc622110134873cbabe1ad30:-1766892287</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_1fa1688647622110ed23d264336d432d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>execute</operation><source_scope display_value="GW React">0cee500247622110ed23d264336d4392</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:17:19</sys_created_on><sys_id>1fa1688647622110ed23d264336d432d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ScriptableServiceResultBuilder.setContentType</sys_name><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_scope_privilege_1fa1688647622110ed23d264336d432d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:17:19</sys_updated_on><target_name>ScriptableServiceResultBuilder.setContentType</target_name><target_scope display_value="Global">global</target_scope><target_type>scriptable</target_type></sys_scope_privilege></record_update>]]></payload>
+<payload_hash>880106735</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>2cb4c7b347a22110ed23d264336d43c9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df6659a50000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>ScriptableServiceResultBuilder.setContentType</target_name>
+<type>Cross scope privilege</type>
+<update_domain>global</update_domain>
+<update_guid>1fa1688643622110d6d36beb6377b72e</update_guid>
+<update_guid_history>1fa1688643622110d6d36beb6377b72e:880106735</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_application_fc30280647622110ed23d264336d43f2</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description/><device_type>browser</device_type><hint/><name/><order>100</order><roles/><sys_class_name>sys_app_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:10:57</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>fc30280647622110ed23d264336d43f2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>GW React</sys_name><sys_overrides/><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_app_application_fc30280647622110ed23d264336d43f2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:10:57</sys_updated_on><title>GW React</title><view_name/></sys_app_application></record_update>]]></payload>
+<payload_hash>2024321337</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>60b4c7b347a22110ed23d264336d43c8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df60856d0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>GW React</target_name>
+<type>Application Menu</type>
+<update_domain>global</update_domain>
+<update_guid>4e306406386221100e21e6bb06808d5d</update_guid>
+<update_guid_history>4e306406386221100e21e6bb06808d5d:2024321337</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_dec4284a47622110ed23d264336d435a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>execute</operation><source_scope display_value="GW React">0cee500247622110ed23d264336d4392</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:30:55</sys_created_on><sys_id>dec4284a47622110ed23d264336d435a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>GlideSysAttachment.getContentStream</sys_name><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_scope_privilege_dec4284a47622110ed23d264336d435a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:30:55</sys_updated_on><target_name>GlideSysAttachment.getContentStream</target_name><target_scope display_value="Global">global</target_scope><target_type>scriptable</target_type></sys_scope_privilege></record_update>]]></payload>
+<payload_hash>-1738059323</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>60b4c7b347a22110ed23d264336d43cb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df72cb6a0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>GlideSysAttachment.getContentStream</target_name>
+<type>Cross scope privilege</type>
+<update_domain>global</update_domain>
+<update_guid>16c4284ad8622110cbaaad907484505c</update_guid>
+<update_guid_history>16c4284ad8622110cbaaad907484505c:-1738059323</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_93a1688647622110ed23d264336d4334</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>execute</operation><source_scope display_value="GW React">0cee500247622110ed23d264336d4392</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:17:19</sys_created_on><sys_id>93a1688647622110ed23d264336d4334</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ScriptableServiceResultStreamWriter.writeString</sys_name><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_scope_privilege_93a1688647622110ed23d264336d4334</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:17:19</sys_updated_on><target_name>ScriptableServiceResultStreamWriter.writeString</target_name><target_scope display_value="Global">global</target_scope><target_type>scriptable</target_type></sys_scope_privilege></record_update>]]></payload>
+<payload_hash>725356429</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>64b4c7b347a22110ed23d264336d43ca</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df6659f90000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>ScriptableServiceResultStreamWriter.writeString</target_name>
+<type>Cross scope privilege</type>
+<update_domain>global</update_domain>
+<update_guid>93a168861c622110a817b69c419ae235</update_guid>
+<update_guid_history>93a168861c622110a817b69c419ae235:725356429</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_13a1688647622110ed23d264336d4332</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>execute</operation><source_scope display_value="GW React">0cee500247622110ed23d264336d4392</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:17:19</sys_created_on><sys_id>13a1688647622110ed23d264336d4332</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ScriptableServiceResultBuilder.getStreamWriter</sys_name><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_scope_privilege_13a1688647622110ed23d264336d4332</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:17:19</sys_updated_on><target_name>ScriptableServiceResultBuilder.getStreamWriter</target_name><target_scope display_value="Global">global</target_scope><target_type>scriptable</target_type></sys_scope_privilege></record_update>]]></payload>
+<payload_hash>-745396959</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>68b4c7b347a22110ed23d264336d43c9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df6659de0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>ScriptableServiceResultBuilder.getStreamWriter</target_name>
+<type>Cross scope privilege</type>
+<update_domain>global</update_domain>
+<update_guid>13a16886b1622110d0a161efc51c6233</update_guid>
+<update_guid_history>13a16886b1622110d0a161efc51c6233:-745396959</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_cbc9aa3747222110ed23d264336d43c0</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="GW React">fc30280647622110ed23d264336d43f2</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>SEPARATOR</link_type><map_page/><mobile_title>Files</mobile_title><mobile_view_name>Mobile</mobile_view_name><name/><order>200</order><override_menu_roles>false</override_menu_roles><query/><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-08 22:42:00</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>cbc9aa3747222110ed23d264336d43c0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Files</sys_name><sys_overrides/><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_app_module_cbc9aa3747222110ed23d264336d43c0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-08 22:42:00</sys_updated_on><timeline_page/><title>Files</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<payload_hash>-2119182107</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>6cb4c7b347a22110ed23d264336d43c8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187fd8762100000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>Files</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_guid>a7e9aaf7c72221102ee6f521a984d555</update_guid>
+<update_guid_history>a7e9aaf7c72221102ee6f521a984d555:-2119182107</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_definition_4a4f58c247622110ed23d264336d43d8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition"><sys_ws_definition action="INSERT_OR_UPDATE"><active>true</active><base_uri>/api/x_727158_gw_react/container</base_uri><consumes>application/json,application/xml,text/xml</consumes><consumes_customized>false</consumes_customized><default_version>No active default version</default_version><doc_link/><enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl><is_versioned>false</is_versioned><name>React app container</name><namespace>x_727158_gw_react</namespace><produces>application/json,application/xml,text/xml</produces><produces_customized>false</produces_customized><service_id>container</service_id><short_description/><sys_class_name>sys_ws_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:07:45</sys_created_on><sys_id>4a4f58c247622110ed23d264336d43d8</sys_id><sys_mod_count>2</sys_mod_count><sys_name>React app container</sys_name><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_ws_definition_4a4f58c247622110ed23d264336d43d8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:08:34</sys_updated_on></sys_ws_definition></record_update>]]></payload>
+<payload_hash>114174546</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>6cb4c7b347a22110ed23d264336d43cb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df5e559d0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>React app container</target_name>
+<type>Scripted REST API</type>
+<update_domain>global</update_domain>
+<update_guid>4bafd4c2b8622110ef2644ee0e692372</update_guid>
+<update_guid_history>4bafd4c2b8622110ef2644ee0e692372:114174546,edaf58c2d662211057d5da36874d3818:99523542,0f7fd0c239622110ce2a02968cbbdeb8:1264821878</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_7b61200647622110ed23d264336d43f1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>execute</operation><source_scope display_value="GW React">0cee500247622110ed23d264336d4392</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:16:16</sys_created_on><sys_id>7b61200647622110ed23d264336d43f1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>RESTAPIRequest</sys_name><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_scope_privilege_7b61200647622110ed23d264336d43f1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:16:16</sys_updated_on><target_name>RESTAPIRequest</target_name><target_scope display_value="Global">global</target_scope><target_type>scriptable</target_type></sys_scope_privilege></record_update>]]></payload>
+<payload_hash>-120907487</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>a0b4c7b347a22110ed23d264336d43ca</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df6562a50000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>RESTAPIRequest</target_name>
+<type>Cross scope privilege</type>
+<update_domain>global</update_domain>
+<update_guid>bf6164869d622110af0c60d65c870e4a</update_guid>
+<update_guid_history>bf6164869d622110af0c60d65c870e4a:-120907487</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_12c4284a47622110ed23d264336d4360</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>execute</operation><source_scope display_value="GW React">0cee500247622110ed23d264336d4392</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:30:55</sys_created_on><sys_id>12c4284a47622110ed23d264336d4360</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ScriptableServiceResultStreamWriter.writeStream</sys_name><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_scope_privilege_12c4284a47622110ed23d264336d4360</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:30:55</sys_updated_on><target_name>ScriptableServiceResultStreamWriter.writeStream</target_name><target_scope display_value="Global">global</target_scope><target_type>scriptable</target_type></sys_scope_privilege></record_update>]]></payload>
+<payload_hash>481076079</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>a4b4c7b347a22110ed23d264336d43c9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df72cba20000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>ScriptableServiceResultStreamWriter.writeStream</target_name>
+<type>Cross scope privilege</type>
+<update_domain>global</update_domain>
+<update_guid>12c4284a43622110e13383c45110e361</update_guid>
+<update_guid_history>12c4284a43622110e13383c45110e361:481076079</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_fdbfdc8247622110ed23d264336d43f7</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl&gt;cf9d01d3e73003009d6247e603f6a990&lt;/enforce_acl&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;JS&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	var fileName = request.pathParams.file;
+	var currentRecord = "fdbfdc8247622110ed23d264336d43f7";
+	var ar = new GlideRecord('sys_attachment');
+	ar.addQuery('table_sys_id', currentRecord);
+	ar.addQuery('file_name', fileName);
+	ar.query();
+	if (ar.next()) {
+		var message = new GlideSysAttachment().getContent(ar);
+		if (fileName.indexOf('-js')&gt;0) {
+			response.setContentType('text/javascript');
+		}
+		else{
+			response.setContentType('text/css');
+		}
+		response.setStatus(200);
+		response.getStreamWriter().writeString(message);
+	} else {
+		return "file not found";
+	}
+
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/x_727158_gw_react/container/js/{file}&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/js/{file}&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;false&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;false&lt;/requires_authentication&gt;&lt;requires_snc_internal_role&gt;true&lt;/requires_snc_internal_role&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-05-03 02:09:51&lt;/sys_created_on&gt;&lt;sys_id&gt;fdbfdc8247622110ed23d264336d43f7&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;JS&lt;/sys_name&gt;&lt;sys_package display_value="GW React" source="x_727158_gw_react"&gt;0cee500247622110ed23d264336d4392&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GW React"&gt;0cee500247622110ed23d264336d4392&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_fdbfdc8247622110ed23d264336d43f7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-05-03 02:19:01&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="React app container"&gt;4a4f58c247622110ed23d264336d43d8&lt;/web_service_definition&gt;&lt;web_service_version/&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<payload_hash>878119301</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>a4b4c7b347a22110ed23d264336d43cc</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187fdc9aa8f0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>JS</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_guid>588a727bd06221109767b4be91f1e66e</update_guid>
+<update_guid_history>588a727bd06221109767b4be91f1e66e:878119301,dc12ac869b622110f38c3d5550739edd:878119301,b9a16486266221108951e4623c329408:-1514466807,8761e086776221101f522c470dd4964e:-1332255452,02ff1006616221103e0b3611181ee129:-1425766670</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_0cee500247622110ed23d264336d4392</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app"><sys_app action="INSERT_OR_UPDATE"><active>true</active><can_edit_in_studio>true</can_edit_in_studio><enforce_license>none</enforce_license><guided_setup_guid/><hide_on_ui>false</hide_on_ui><installed_as_dependency>false</installed_as_dependency><js_level>es_latest</js_level><licensable>true</licensable><license/><license_category>none</license_category><license_definition/><license_model>none</license_model><logo/><menu/><name>GW React</name><private>false</private><restrict_table_access>false</restrict_table_access><runtime_access_tracking>permissive</runtime_access_tracking><scope>x_727158_gw_react</scope><scoped_administration>false</scoped_administration><short_description/><source>x_727158_gw_react</source><store_correlation_id/><store_url/><sys_class_name>sys_app</sys_class_name><sys_code/><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:05:05</sys_created_on><sys_id>0cee500247622110ed23d264336d4392</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:05:05</sys_updated_on><template/><trackable>true</trackable><uninstall_blocked>false</uninstall_blocked><user_role/><vendor/><vendor_prefix/><version>1.0.0</version></sys_app><sys_translated_text action="delete_multiple" query="documentkey=0cee500247622110ed23d264336d4392"/></record_update>]]></payload>
+<payload_hash>-1820185618</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>a8b4c7b347a22110ed23d264336d43c7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df5b25c40000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>GW React</target_name>
+<type>Custom Application</type>
+<update_domain>global</update_domain>
+<update_guid>40ee50024762211082d6859478a33397</update_guid>
+<update_guid_history>40ee50024762211082d6859478a33397:-1820185618</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_943ae23b47222110ed23d264336d430b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="GW React">fc30280647622110ed23d264336d43f2</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>DIRECT</link_type><map_page/><mobile_title>Javascript</mobile_title><mobile_view_name>Mobile</mobile_view_name><name/><order>220</order><override_menu_roles>false</override_menu_roles><query>nav_to.do?uri=sys_ws_operation.do?sys_id=2072311e47aa2110ed23d264336d43b6</query><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-08 22:43:09</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>943ae23b47222110ed23d264336d430b</sys_id><sys_mod_count>1</sys_mod_count><sys_name>CSS</sys_name><sys_overrides/><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_app_module_943ae23b47222110ed23d264336d430b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-08 22:43:44</sys_updated_on><timeline_page/><title>CSS</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<payload_hash>-197493632</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>a8b4c7b347a22110ed23d264336d43c8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187fd88f7a10000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>CSS</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_guid>815a62f757222110ef3c95f10fa4ab71</update_guid>
+<update_guid_history>815a62f757222110ef3c95f10fa4ab71:-197493632,5c3ae23b30222110ed217599e43b360c:-795452038</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_page_fbeed0c247622110ed23d264336d43ae</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script/&gt;&lt;description/&gt;&lt;direct&gt;true&lt;/direct&gt;&lt;endpoint&gt;x_727158_gw_react_index-html.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+  &lt;j:jelly
+    trim="false"
+    xmlns:j="jelly:core"
+    xmlns:g="glide"
+    xmlns:j2="null"
+    xmlns:g2="null"
+  &gt;
+&lt;g:evaluate&gt; 
+      var docType = '&amp;lt;!DOCTYPE HTML&amp;gt;'; 
+  &lt;/g:evaluate&gt; 
+  &lt;g2:no_escape&gt; 
+      $[docType] 
+  &lt;/g2:no_escape&gt;
+    &lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;link rel="icon" type="image/svg+xml" href="/vite.svg" /&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+&lt;title&gt;Vite + React + ServiceNow + TS&lt;/title&gt;
+&lt;script type="module"  src="/api/x_727158_gw_react/container/js/index-snbuild-js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="/api/x_727158_gw_react/container/css/index-d526a0c5-css"/&gt;
+&lt;!-- handle security token for API requests --&gt;
+  &lt;div style="display:none"&gt;
+    &lt;g:evaluate object="true"&gt;
+      var session = gs.getSession(); var token = session.getSessionToken(); if
+      (token=='' || token==undefined) token = gs.getSessionToken();
+    &lt;/g:evaluate&gt;
+  &lt;/div&gt;
+  &lt;script&gt;
+    window.servicenowUserToken = '$[token]'
+  &lt;/script&gt;
+  &lt;!-- handle security token for API requests --&gt;
+  &lt;/head&gt;
+&lt;body&gt;
+&lt;div id="root"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;index-html&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-05-03 02:06:31&lt;/sys_created_on&gt;&lt;sys_id&gt;fbeed0c247622110ed23d264336d43ae&lt;/sys_id&gt;&lt;sys_mod_count&gt;16&lt;/sys_mod_count&gt;&lt;sys_name&gt;index-html&lt;/sys_name&gt;&lt;sys_package display_value="GW React" source="x_727158_gw_react"&gt;0cee500247622110ed23d264336d4392&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GW React"&gt;0cee500247622110ed23d264336d4392&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_fbeed0c247622110ed23d264336d43ae&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-05-08 22:33:26&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-260962003</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>a8b4c7b347a22110ed23d264336d43cb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187fd7f8a510000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>index-html</target_name>
+<type>UI Page</type>
+<update_domain>global</update_domain>
+<update_guid>82f7aaf7562221104114cc69088d203d</update_guid>
+<update_guid_history>82f7aaf7562221104114cc69088d203d:-260962003,54272a37c02221108b07f9360e057857:2012302513,33e42e375e222110ae533603eab880b8:-220579761,d3123512d5ea2110d13b95bb1da65877:1701703080,94e0bddeb0aa2110cfcb16907f1ba9d7:-817786058,71b07112d1ea2110895f681e5c06eca1:-1367980024,8790bddeedaa2110e24570cfc52cfcd1:2014747877,ecb770dacce62110aecf2f14a61d04d5:274178433,359770da0fe62110d15f0302df458fd2:-993756543,3977b4dac8e6211025a418c8005ac034:1262136163,7e57f0dabde6211049cf611fa755a2a7:-1362718049,156360c6be622110fbc7afe5e6034b76:-185349281,14626086b46221108f1a4a3c108ad078:-948122246,6941ec466a6221102199d7353a4b1165:-1077552033,4931ac462f62211030108884226b6c5f:-2108717101,4020200623622110c18182996b49d8bc:1779565553,853f18c256622110c9db975a82226114:836969932</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_dba1644647622110ed23d264336d4396</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>execute</operation><source_scope display_value="GW React">0cee500247622110ed23d264336d4392</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:17:19</sys_created_on><sys_id>dba1644647622110ed23d264336d4396</sys_id><sys_mod_count>0</sys_mod_count><sys_name>GlideSysAttachment.getContent</sys_name><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_scope_privilege_dba1644647622110ed23d264336d4396</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:17:19</sys_updated_on><target_name>GlideSysAttachment.getContent</target_name><target_scope display_value="Global">global</target_scope><target_type>scriptable</target_type></sys_scope_privilege></record_update>]]></payload>
+<payload_hash>-1784894331</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>acb4c7b347a22110ed23d264336d43ca</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df6659840000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>GlideSysAttachment.getContent</target_name>
+<type>Cross scope privilege</type>
+<update_domain>global</update_domain>
+<update_guid>13a164463f622110fc09ba209f088598</update_guid>
+<update_guid_history>13a164463f622110fc09ba209f088598:-1784894331</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_properties_63f1a53377451110cd1b756f1b5a9991</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Captures the last execution timestamp of the scheduled job 'Surface New Unconnected Content of Categories'</description><ignore_cache>true</ignore_cache><is_private>false</is_private><name>taxonomy.category.new_content_job_last_run</name><read_roles/><suffix/><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-08 07:43:25</sys_created_on><sys_id>63f1a53377451110cd1b756f1b5a9991</sys_id><sys_mod_count>11</sys_mod_count><sys_name>taxonomy.category.new_content_job_last_run</sys_name><sys_package display_value="Content Taxonomy" source="com.snc.taxonomy">48d29379e825211076da10591ad287da</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_properties_63f1a53377451110cd1b756f1b5a9991</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-08 12:59:48</sys_updated_on><type>date_format</type><value>2023-05-08</value><write_roles>maint</write_roles></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=63f1a53377451110cd1b756f1b5a9991"/></record_update>]]></payload>
+<payload_hash>-1690240985</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>e0b4c7b347a22110ed23d264336d43c9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187fb725b690000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>taxonomy.category.new_content_job_last_run</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_guid>1fa4e8f37c222110ca46680ca9a61654</update_guid>
+<update_guid_history>1fa4e8f37c222110ca46680ca9a61654:-1690240985,b71c5125b4222110d66b40b9c1e22b74:-500553650,731c512512222110d8a7096ff9117b72:-437767834</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_2072311e47aa2110ed23d264336d43b6</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl&gt;cf9d01d3e73003009d6247e603f6a990&lt;/enforce_acl&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;CSS&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	var fileName = request.pathParams.file;
+	var currentRecord = "2072311e47aa2110ed23d264336d43b6";
+	var ar = new GlideRecord('sys_attachment');
+	ar.addQuery('table_sys_id', currentRecord);
+	ar.addQuery('file_name', fileName);
+	ar.query();
+	if (ar.next()) {
+		var message = new GlideSysAttachment().getContent(ar);
+		if (fileName.indexOf('-js')&gt;0) {
+			response.setContentType('text/javascript');
+		}
+		else{
+			response.setContentType('text/css');
+		}
+		response.setStatus(200);
+		response.getStreamWriter().writeString(message);
+	} else {
+		return "file not found";
+	}
+
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/x_727158_gw_react/container/css/{file}&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/css/{file}&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;false&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;false&lt;/requires_authentication&gt;&lt;requires_snc_internal_role&gt;true&lt;/requires_snc_internal_role&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-05-04 02:48:41&lt;/sys_created_on&gt;&lt;sys_id&gt;2072311e47aa2110ed23d264336d43b6&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;CSS&lt;/sys_name&gt;&lt;sys_package display_value="GW React" source="x_727158_gw_react"&gt;0cee500247622110ed23d264336d4392&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GW React"&gt;0cee500247622110ed23d264336d4392&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_2072311e47aa2110ed23d264336d43b6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-05-08 23:57:27&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="React app container"&gt;4a4f58c247622110ed23d264336d43d8&lt;/web_service_definition&gt;&lt;web_service_version/&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-596633326</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>e0b4c7b347a22110ed23d264336d43cc</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187fdcc72ec0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>CSS</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_guid>b03b727b7e6221109d9d2fcbf6994557</update_guid>
+<update_guid_history>b03b727b7e6221109d9d2fcbf6994557:-596633326,6c72f9522aea211056f334fcefd19379:1037742939</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_6060ecc247622110ed23d264336d435d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="GW React">fc30280647622110ed23d264336d43f2</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>DIRECT</link_type><map_page/><mobile_title>Index</mobile_title><mobile_view_name>Mobile</mobile_view_name><name/><order>100</order><override_menu_roles>false</override_menu_roles><query>nav_to.do?uri=sys_ui_page.do?sys_id=fbeed0c247622110ed23d264336d43ae</query><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:12:26</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>6060ecc247622110ed23d264336d435d</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Index</sys_name><sys_overrides/><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_app_module_6060ecc247622110ed23d264336d435d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-08 22:19:50</sys_updated_on><timeline_page/><title>Index</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<payload_hash>-165445410</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>e4b4c7b347a22110ed23d264336d43c8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187fd73140c0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>Index</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_guid>f2d4a6370d2221100bc1ee2c4bd0bd61</update_guid>
+<update_guid_history>f2d4a6370d2221100bc1ee2c4bd0bd61:-165445410,7e04a6f34f222110e7cdb40264c47d43:902708076,ab80a44687622110e1847db4b291f13c:908816151</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_453f18c247622110ed23d264336d4310</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:06:31</sys_created_on><sys_id>453f18c247622110ed23d264336d4310</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_727158_gw_react_index-html.public</sys_name><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_security_acl display_value="x_727158_gw_react_index-html">853f9c4247622110ed23d264336d43fa</sys_security_acl><sys_update_name>sys_security_acl_role_453f18c247622110ed23d264336d4310</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:06:31</sys_updated_on><sys_user_role display_value="public" name="public">b0593b350a0a0aa7001d689e4542dc28</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+<payload_hash>-1278352113</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>e4b4c7b347a22110ed23d264336d43cb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df5c77690000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table>x_727158_gw_react_index-html</table>
+<target_name>x_727158_gw_react_index-html.public</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_guid>c93f18c2ff622110fc0a1ef7a1e64312</update_guid>
+<update_guid_history>c93f18c2ff622110fc0a1ef7a1e64312:-1278352113</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_d6c4284a47622110ed23d264336d435d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>read</operation><source_scope display_value="GW React">0cee500247622110ed23d264336d4392</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:30:55</sys_created_on><sys_id>d6c4284a47622110ed23d264336d435d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sys_ws_operation</sys_name><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_scope_privilege_d6c4284a47622110ed23d264336d435d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:30:55</sys_updated_on><target_name>sys_ws_operation</target_name><target_scope display_value="Global">global</target_scope><target_type>sys_db_object</target_type></sys_scope_privilege></record_update>]]></payload>
+<payload_hash>857514929</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>e8b4c7b347a22110ed23d264336d43ca</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df72cb860000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>sys_ws_operation</target_name>
+<type>Cross scope privilege</type>
+<update_domain>global</update_domain>
+<update_guid>d6c4284a3b622110927c747e338a165e</update_guid>
+<update_guid_history>d6c4284a3b622110927c747e338a165e:857514929</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="GW React">0cee500247622110ed23d264336d4392</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_7361648647622110ed23d264336d434c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>read</operation><source_scope display_value="GW React">0cee500247622110ed23d264336d4392</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-05-03 02:16:16</sys_created_on><sys_id>7361648647622110ed23d264336d434c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sys_attachment</sys_name><sys_package display_value="GW React" source="x_727158_gw_react">0cee500247622110ed23d264336d4392</sys_package><sys_policy/><sys_scope display_value="GW React">0cee500247622110ed23d264336d4392</sys_scope><sys_update_name>sys_scope_privilege_7361648647622110ed23d264336d434c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-05-03 02:16:16</sys_updated_on><target_name>sys_attachment</target_name><target_scope display_value="Global">global</target_scope><target_type>sys_db_object</target_type></sys_scope_privilege></record_update>]]></payload>
+<payload_hash>149739089</payload_hash>
+<remote_update_set display_value="Default">a4b4c7b347a22110ed23d264336d43c7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-05-09 00:38:56</sys_created_on>
+<sys_id>ecb4c7b347a22110ed23d264336d43c9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>187df6562c10000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-05-09 00:38:56</sys_updated_on>
+<table/>
+<target_name>sys_attachment</target_name>
+<type>Cross scope privilege</type>
+<update_domain>global</update_domain>
+<update_guid>73616486486221102ed332005851674d</update_guid>
+<update_guid_history>73616486486221102ed332005851674d:149739089</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
