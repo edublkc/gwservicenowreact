@@ -8,8 +8,9 @@
 ### 1 - Install this servicenow react boilerplate 
 git clone https://github.com/edublkc/gwservicenowreact.git
 
-Navigate to snreact folder and install npm dependencies:
+Navigate to gwservicenowreact folder and install npm dependencies:
 
+cd gwservicenowreact
 npm install
 
 ### 2 - Install GW React application - ServiceNow scoped application 
@@ -59,8 +60,9 @@ Every new update you will have to deploy using npm run snbuild and dragging the 
 ### 1 - Instale esse boilerplate do react que contém as configurações prontas para usar no ServiceNow:
 git clone https://github.com/edublkc/gwservicenowreact.git
 
-Navegue para a pasta snreact e instale as npm dependencies:
+Navegue para a pasta gwservicenowreact e instale as npm dependencies:
 
+cd gwservicenowreact
 npm install
 
 ### 2 - Instale o xml do updateset da aplicação GW React
