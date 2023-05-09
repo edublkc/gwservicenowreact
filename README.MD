@@ -11,6 +11,7 @@ git clone https://github.com/edublkc/gwservicenowreact.git
 Navigate to gwservicenowreact folder and install npm dependencies:
 
 cd gwservicenowreact
+
 npm install
 
 ### 2 - Install GW React application - ServiceNow scoped application 
@@ -63,6 +64,7 @@ git clone https://github.com/edublkc/gwservicenowreact.git
 Navegue para a pasta gwservicenowreact e instale as npm dependencies:
 
 cd gwservicenowreact
+
 npm install
 
 ### 2 - Instale o xml do updateset da aplicação GW React
