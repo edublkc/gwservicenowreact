@@ -1,6 +1,6 @@
 # React TS in ServiceNow
 
-![image](https://user-images.githubusercontent.com/89402489/236964380-49b24d91-ee58-49fa-a8ed-d4a33e273933.png)
+![image](https://user-images.githubusercontent.com/89402489/236964431-771a3e0b-d95d-4537-b802-a940173d9dbf.png)
 
 
 ## Tutorial - EN
